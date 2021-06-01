@@ -31,4 +31,9 @@ while True:
         food.refresh()
         score.refresh()
 
+    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
+        score.game_over()
+        break
+
+
 screen.exitonclick()
