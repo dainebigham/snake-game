@@ -42,7 +42,7 @@ while game_is_on == True:
         snake.grow()
 
     # if snake exits the game screen call game over and end game loop
-    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
+    if snake.head.xcor() > 280 or snake.head.xcor() < -300 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
         score.game_over()
         game_is_on = False
 
