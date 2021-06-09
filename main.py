@@ -43,8 +43,8 @@ while game_is_on == True:
 
     # if snake exits the game screen call game over and end game loop
     if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
-        score.game_over()
-        game_is_on = False
+        score.reset()
+        snake.reset()
 
     # check the segments of the snake to make sure that the head is never occupying the same space as one of them
     # but make sure to exclude the head itself
@@ -52,8 +52,8 @@ while game_is_on == True:
         if segment == snake.head:
             pass
         elif snake.head.distance(segment) < 10:
-            score.game_over()
-            game_is_on = False
+            score.reset()
+            snake.reset()
 
 # keep screen open until clicked
 screen.exitonclick()
